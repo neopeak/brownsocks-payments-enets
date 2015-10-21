@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns="http://castor.exolab.org/" xmlns:cst="http://castor.exolab.org/">
+  <description>Mapping file for the all UMAPI beans.</description>
+  
+  <!-- *ACK BEANS -->
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.DebitAck">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.DebitAck</description>
+    <map-to cst:xml="debit-ack"/>
+    <field cst:name="retry" cst:type="java.lang.String" required="false">
+      <bind-xml name="retry" node="element"/>
+    </field>
+    <field cst:name="version" cst:type="java.lang.String" required="false">
+      <bind-xml name="version" node="element"/>
+    </field>
+    <field cst:name="param5" cst:type="java.lang.String" required="false">
+      <bind-xml name="param5" node="element"/>
+    </field>
+    <field cst:name="param4" cst:type="java.lang.String" required="false">
+      <bind-xml name="param4" node="element"/>
+    </field>
+    <field cst:name="param3" cst:type="java.lang.String" required="false">
+      <bind-xml name="param3" node="element"/>
+    </field>
+    <field cst:name="param2" cst:type="java.lang.String" required="false">
+      <bind-xml name="param2" node="element"/>
+    </field>
+    <field cst:name="param1" cst:type="java.lang.String" required="false">
+      <bind-xml name="param1" node="element"/>
+    </field>
+    <field cst:name="certId" cst:type="java.lang.String" required="false">
+      <bind-xml name="certId" node="element"/>
+    </field>
+  </class>
+  
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.TxnAck">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.TxnAck</description>
+    <map-to cst:xml="txn-ack"/>
+    <field cst:name="netsTxnRef" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-ref" node="element"/>
+    </field>
+    <field cst:name="netsMid" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-mid" node="element"/>
+    </field>
+    <field cst:name="creditAck" cst:type="org.brownsocks.payments.gateways.enets.data.CreditAck" required="false">
+      <bind-xml name="credit-ack" node="element"/>
+    </field>
+    <field cst:name="debitAck" cst:type="org.brownsocks.payments.gateways.enets.data.DebitAck" required="false">
+      <bind-xml name="debit-ack" node="element"/>
+    </field>
+    <field cst:name="merchantCertId" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-cert-id" node="element"/>
+    </field>
+    <field cst:name="mid" cst:type="java.lang.Integer" required="false">
+      <bind-xml name="mid" node="element"/>
+    </field>
+    <field cst:name="merchantTxnStatus" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-status" node="element"/>
+    </field>
+    <field cst:name="merchantTxnRef" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-ref" node="element"/>
+    </field>
+  </class>
+  
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.CreditAck">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.CreditAck</description>
+    <map-to cst:xml="credit-ack"/>
+  </class>
+  
+  
+  <!-- *Nofify beans -->
+    <class cst:name="org.brownsocks.payments.gateways.enets.data.TxnNotify">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.TxnNotify</description>
+    <map-to cst:xml="txn-notify"/>
+    <field cst:name="currencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="currency-code" node="element"/>
+    </field>
+    <field cst:name="netsTxnRef" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-ref" node="element"/>
+    </field>
+    <field cst:name="netsMid" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-mid" node="element"/>
+    </field>
+    <field cst:name="tid" cst:type="java.lang.String" required="false">
+      <bind-xml name="tid" node="element"/>
+    </field>
+    <field cst:name="merchantTxnDtm" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-dtm" node="element"/>
+    </field>
+    <field cst:name="submissionMode" cst:type="java.lang.String" required="false">
+      <bind-xml name="submission-mode" node="element"/>
+    </field>
+    <field cst:name="merchantCertId" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-cert-id" node="element"/>
+    </field>
+    <field cst:name="paymentMode" cst:type="java.lang.String" required="false">
+      <bind-xml name="payment-mode" node="element"/>
+    </field>
+    <field cst:name="netsTxnDtm" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-dtm" node="element"/>
+    </field>
+    <field cst:name="creditNotify" cst:type="org.brownsocks.payments.gateways.enets.data.CreditNotify" required="false">
+      <bind-xml name="credit-notify" node="element"/>
+    </field>
+    <field cst:name="debitNotify" cst:type="org.brownsocks.payments.gateways.enets.data.DebitNotify" required="false">
+      <bind-xml name="debit-notify" node="element"/>
+    </field>
+    <field cst:name="mid" cst:type="java.lang.Integer" required="false">
+      <bind-xml name="mid" node="element"/>
+    </field>
+    <field cst:name="netsTxnStatus" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-status" node="element"/>
+    </field>
+    <field cst:name="txnAmount" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-amount" node="element"/>
+    </field>
+    <field cst:name="merchantTxnRef" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-ref" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.CreditNotify">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.CreditNotify</description>
+    <map-to cst:xml="credit-notify"/>
+    <field cst:name="netsRiskScore" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-risk-score" node="element"/>
+    </field>
+    <field cst:name="param5" cst:type="java.lang.String" required="false">
+      <bind-xml name="param5" node="element"/>
+    </field>
+    <field cst:name="param4" cst:type="java.lang.String" required="false">
+      <bind-xml name="param4" node="element"/>
+    </field>
+    <field cst:name="bankAuthId" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-auth-id" node="element"/>
+    </field>
+    <field cst:name="param3" cst:type="java.lang.String" required="false">
+      <bind-xml name="param3" node="element"/>
+    </field>
+    <field cst:name="param2" cst:type="java.lang.String" required="false">
+      <bind-xml name="param2" node="element"/>
+    </field>
+    <field cst:name="param1" cst:type="java.lang.String" required="false">
+      <bind-xml name="param1" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.DebitNotify">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.DebitNotify</description>
+    <map-to cst:xml="debit-notify"/>
+    <field cst:name="bankId" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-id" node="element"/>
+    </field>
+    <field cst:name="gwValueDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-value-date" node="element"/>
+    </field>
+    <field cst:name="gwTxnTime" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-txn-time" node="element"/>
+    </field>
+    <field cst:name="bankTxnTime" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-txn-time" node="element"/>
+    </field>
+    <field cst:name="version" cst:type="java.lang.String" required="false">
+      <bind-xml name="version" node="element"/>
+    </field>
+    <field cst:name="bankRefCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-ref-code" node="element"/>
+    </field>
+    <field cst:name="param5" cst:type="java.lang.String" required="false">
+      <bind-xml name="param5" node="element"/>
+    </field>
+    <field cst:name="param4" cst:type="java.lang.String" required="false">
+      <bind-xml name="param4" node="element"/>
+    </field>
+    <field cst:name="param15" cst:type="java.lang.String" required="false">
+      <bind-xml name="param15" node="element"/>
+    </field>
+    <field cst:name="param3" cst:type="java.lang.String" required="false">
+      <bind-xml name="param3" node="element"/>
+    </field>
+    <field cst:name="param14" cst:type="java.lang.String" required="false">
+      <bind-xml name="param14" node="element"/>
+    </field>
+    <field cst:name="param2" cst:type="java.lang.String" required="false">
+      <bind-xml name="param2" node="element"/>
+    </field>
+    <field cst:name="param13" cst:type="java.lang.String" required="false">
+      <bind-xml name="param13" node="element"/>
+    </field>
+    <field cst:name="param1" cst:type="java.lang.String" required="false">
+      <bind-xml name="param1" node="element"/>
+    </field>
+    <field cst:name="param12" cst:type="java.lang.String" required="false">
+      <bind-xml name="param12" node="element"/>
+    </field>
+    <field cst:name="param11" cst:type="java.lang.String" required="false">
+      <bind-xml name="param11" node="element"/>
+    </field>
+    <field cst:name="bankStatus" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-status" node="element"/>
+    </field>
+    <field cst:name="txnDestCurrencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-dest-currency-code" node="element"/>
+    </field>
+    <field cst:name="bankTimeZone" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-time-zone" node="element"/>
+    </field>
+    <field cst:name="txnSrcCurrencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-src-currency-code" node="element"/>
+    </field>
+    <field cst:name="srcFuncExchangeRate" cst:type="java.lang.String" required="false">
+      <bind-xml name="src-func-exchange-rate" node="element"/>
+    </field>
+    <field cst:name="txnFuncAmt" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-func-amt" node="element"/>
+    </field>
+    <field cst:name="bankRemarks" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-remarks" node="element"/>
+    </field>
+    <field cst:name="retry" cst:type="java.lang.String" required="false">
+      <bind-xml name="retry" node="element"/>
+    </field>
+    <field cst:name="gwTxnDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-txn-date" node="element"/>
+    </field>
+    <field cst:name="bankTxnDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-txn-date" node="element"/>
+    </field>
+    <field cst:name="tid" cst:type="java.lang.String" required="false">
+      <bind-xml name="tid" node="element"/>
+    </field>
+    <field cst:name="gwTimeZone" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-time-zone" node="element"/>
+    </field>
+    <field cst:name="txnFunCurrencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-fun-currency-code" node="element"/>
+    </field>
+    <field cst:name="txnSrcAmt" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-src-amt" node="element"/>
+    </field>
+    <field cst:name="txnDestAmt" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-dest-amt" node="element"/>
+    </field>
+    <field cst:name="funcDestExchangeRate" cst:type="java.lang.String" required="false">
+      <bind-xml name="func-dest-exchange-rate" node="element"/>
+    </field>
+    <field cst:name="gwStatus" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-status" node="element"/>
+    </field>
+    <field cst:name="gwTxnCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-txn-code" node="element"/>
+    </field>
+  </class>
+  
+  
+  <!-- *Req beans: -->
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.EzProtect">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.EzProtect</description>
+    <map-to cst:xml="ez-protect"/>
+    <field cst:name="shipAmt" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-amt" node="element"/>
+    </field>
+    <field cst:name="billFirstName" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-first-name" node="element"/>
+    </field>
+    <field cst:name="shipFaxNum" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-fax-num" node="element"/>
+    </field>
+    <field cst:name="productFormat" cst:type="java.lang.String" required="false">
+      <bind-xml name="product-format" node="element"/>
+    </field>
+    <field cst:name="productDetails" cst:type="java.lang.Object" cst:collection="collection" required="false">
+      <bind-xml name="product-details" node="element"/>
+    </field>
+    <field cst:name="shipEmail" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-email" node="element"/>
+    </field>
+    <field cst:name="billPhoneNum" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-phone-num" node="element"/>
+    </field>
+    <field cst:name="shipInitial" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-initial" node="element"/>
+    </field>
+    <field cst:name="shipCity" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-city" node="element"/>
+    </field>
+    <field cst:name="billZipCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-zip-code" node="element"/>
+    </field>
+    <field cst:name="shipCoyName" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-coy-name" node="element"/>
+    </field>
+    <field cst:name="billMobileNum" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-mobile-num" node="element"/>
+    </field>
+    <field cst:name="shipAddr2" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-addr2" node="element"/>
+    </field>
+    <field cst:name="shipCountry" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-country" node="element"/>
+    </field>
+    <field cst:name="shipAddr1" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-addr1" node="element"/>
+    </field>
+    <field cst:name="billLastName" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-last-name" node="element"/>
+    </field>
+    <field cst:name="shopperIpAddr" cst:type="java.lang.String" required="false">
+      <bind-xml name="shopper-ip-addr" node="element"/>
+    </field>
+    <field cst:name="billState" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-state" node="element"/>
+    </field>
+    <field cst:name="shipZipCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-zip-code" node="element"/>
+    </field>
+    <field cst:name="billCoyName" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-coy-name" node="element"/>
+    </field>
+    <field cst:name="shipPhoneNum" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-phone-num" node="element"/>
+    </field>
+    <field cst:name="shipFirstName" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-first-name" node="element"/>
+    </field>
+    <field cst:name="billCity" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-city" node="element"/>
+    </field>
+    <field cst:name="billCountry" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-country" node="element"/>
+    </field>
+    <field cst:name="shipMobileNum" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-mobile-num" node="element"/>
+    </field>
+    <field cst:name="shipLastName" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-last-name" node="element"/>
+    </field>
+    <field cst:name="shipState" cst:type="java.lang.String" required="false">
+      <bind-xml name="ship-state" node="element"/>
+    </field>
+    <field cst:name="billEmail" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-email" node="element"/>
+    </field>
+    <field cst:name="billFaxNum" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-fax-num" node="element"/>
+    </field>
+    <field cst:name="billAddr2" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-addr2" node="element"/>
+    </field>
+    <field cst:name="billInitial" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-initial" node="element"/>
+    </field>
+    <field cst:name="billAddr1" cst:type="java.lang.String" required="false">
+      <bind-xml name="bill-addr1" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.TxnReq">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.TxnReq</description>
+    <map-to cst:xml="txn-req"/>
+    <field cst:name="txnAmount" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-amount" node="element"/>
+    </field>
+    <field cst:name="clientType" cst:type="java.lang.String" required="false">
+      <bind-xml name="client-type" node="element"/>
+    </field>
+    <field cst:name="creditTxnReq" cst:type="org.brownsocks.payments.gateways.enets.data.CreditTxnReq" required="false">
+      <bind-xml name="credit-txn-req" node="element"/>
+    </field>
+    <field cst:name="currencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="currency-code" node="element"/>
+    </field>
+    <field cst:name="debitTxnReq" cst:type="org.brownsocks.payments.gateways.enets.data.DebitTxnReq" required="false">
+      <bind-xml name="debit-txn-req" node="element"/>
+    </field>
+    <field cst:name="tid" cst:type="java.lang.String" required="false">
+      <bind-xml name="tid" node="element"/>
+    </field>
+    <field cst:name="merchantTxnDtm" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-dtm" node="element"/>
+    </field>
+    <field cst:name="submissionMode" cst:type="java.lang.String" required="false">
+      <bind-xml name="submission-mode" node="element"/>
+    </field>
+    <field cst:name="merchantCertId" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-cert-id" node="element"/>
+    </field>
+    <field cst:name="paymentMode" cst:type="java.lang.String" required="false">
+      <bind-xml name="payment-mode" node="element"/>
+    </field>
+    <field cst:name="netsMid" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-mid" node="element"/>
+    </field>
+    <field cst:name="merchantTxnRef" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-ref" node="element"/>
+    </field>
+    <field cst:name="successUrl" cst:type="java.lang.String" required="false">
+      <bind-xml name="success-url" node="element"/>
+    </field>
+    <field cst:name="successUrlParams" cst:type="java.lang.String" required="false">
+      <bind-xml name="success-url-params" node="element"/>
+    </field>
+    <field cst:name="failureUrl" cst:type="java.lang.String" required="false">
+      <bind-xml name="failure-url" node="element"/>
+    </field>
+    <field cst:name="failureUrlParams" cst:type="java.lang.String" required="false">
+      <bind-xml name="failure-url-params" node="element"/>
+    </field>
+    <field cst:name="notifyUrl" cst:type="java.lang.String" required="false">
+      <bind-xml name="notify-url" node="element"/>
+    </field>
+    <field cst:name="notifyUrlParams" cst:type="java.lang.String" required="false">
+      <bind-xml name="notify-url-params" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.DebitTxnReq">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.DebitTxnReq</description>
+    <map-to cst:xml="debit-txn-req"/>
+    <field cst:name="merchantTxnDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-date" node="element"/>
+    </field>
+    <field cst:name="version" cst:type="java.lang.String" required="false">
+      <bind-xml name="version" node="element"/>
+    </field>
+    <field cst:name="param5" cst:type="java.lang.String" required="false">
+      <bind-xml name="param5" node="element"/>
+    </field>
+    <field cst:name="param4" cst:type="java.lang.String" required="false">
+      <bind-xml name="param4" node="element"/>
+    </field>
+    <field cst:name="param3" cst:type="java.lang.String" required="false">
+      <bind-xml name="param3" node="element"/>
+    </field>
+    <field cst:name="param2" cst:type="java.lang.String" required="false">
+      <bind-xml name="param2" node="element"/>
+    </field>
+    <field cst:name="merchantCountryCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-country-code" node="element"/>
+    </field>
+    <field cst:name="param1" cst:type="java.lang.String" required="false">
+      <bind-xml name="param1" node="element"/>
+    </field>
+    <field cst:name="merchantTimeZone" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-time-zone" node="element"/>
+    </field>
+    <field cst:name="strTxnEndParam2" cst:type="java.lang.String" required="false">
+      <bind-xml name="str-txn-end-param2" node="element"/>
+    </field>
+    <field cst:name="txnType" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-type" node="element"/>
+    </field>
+    <field cst:name="merchantTxnTime" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-time" node="element"/>
+    </field>
+    <field cst:name="strNotifyParam" cst:type="java.lang.String" required="false">
+      <bind-xml name="str-notify-param" node="element"/>
+    </field>
+    <field cst:name="retry" cst:type="java.lang.String" required="false">
+      <bind-xml name="retry" node="element"/>
+    </field>
+    <field cst:name="strTxnEndParam" cst:type="java.lang.String" required="false">
+      <bind-xml name="str-txn-end-param" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.Secure3D">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.Secure3D</description>
+    <map-to cst:xml="secure3-d"/>
+    <field cst:name="txCavv" cst:type="java.lang.String" required="false">
+      <bind-xml name="tx-cavv" node="element"/>
+    </field>
+    <field cst:name="purchaseXid" cst:type="java.lang.String" required="false">
+      <bind-xml name="purchase-xid" node="element"/>
+    </field>
+    <field cst:name="txStatus" cst:type="java.lang.String" required="false">
+      <bind-xml name="tx-status" node="element"/>
+    </field>
+    <field cst:name="txEci" cst:type="java.lang.String" required="false">
+      <bind-xml name="tx-eci" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.CreditTxnReq">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.CreditTxnReq</description>
+    <map-to cst:xml="credit-txn-req"/>
+    <field cst:name="expiryDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="expiry-date" node="element"/>
+    </field>
+    <field cst:name="s3d" cst:type="org.brownsocks.payments.gateways.enets.data.Secure3D" required="false">
+      <bind-xml name="secure3-d" node="element"/>
+    </field>
+    <field cst:name="paymentType" cst:type="java.lang.String" required="false">
+      <bind-xml name="payment-type" node="element"/>
+    </field>
+    <field cst:name="postUrl" cst:type="java.lang.String" required="false">
+      <bind-xml name="post-url" node="element"/>
+    </field>
+    <field cst:name="postUrlParams" cst:type="java.lang.String" required="false">
+      <bind-xml name="post-url-params" node="element"/>
+    </field>
+    <field cst:name="ezProtect" cst:type="org.brownsocks.payments.gateways.enets.data.EzProtect" required="false">
+      <bind-xml name="ez-protect" node="element"/>
+    </field>
+    <field cst:name="cvv" cst:type="java.lang.String" required="false">
+      <bind-xml name="cvv" node="element"/>
+    </field>
+    <field cst:name="pan" cst:type="java.lang.String" required="false">
+      <bind-xml name="pan" node="element"/>
+    </field>
+    <field cst:name="invoice" cst:type="java.lang.String" required="false">
+      <bind-xml name="invoice" node="element"/>
+    </field>
+    <field cst:name="cardBrand" cst:type="java.lang.String" required="false">
+      <bind-xml name="card-brand" node="element"/>
+    </field>
+    <field cst:name="cardHolderName" cst:type="java.lang.String" required="false">
+      <bind-xml name="card-holder-name" node="element"/>
+    </field>
+    <field cst:name="cancelUrl" cst:type="java.lang.String" required="false">
+      <bind-xml name="cancel-url" node="element"/>
+    </field>
+    <field cst:name="cancelUrlParams" cst:type="java.lang.String" required="false">
+      <bind-xml name="cancel-url-params" node="element"/>
+    </field>
+    <field cst:name="stan" cst:type="java.lang.String" required="false">
+      <bind-xml name="stan" node="element"/>
+    </field>
+    <field cst:name="param1" cst:type="java.lang.String" required="false">
+      <bind-xml name="param1" node="element"/>
+    </field>
+    <field cst:name="param2" cst:type="java.lang.String" required="false">
+      <bind-xml name="param2" node="element"/>
+    </field>
+    <field cst:name="param3" cst:type="java.lang.String" required="false">
+      <bind-xml name="param3" node="element"/>
+    </field>
+    <field cst:name="param4" cst:type="java.lang.String" required="false">
+      <bind-xml name="param4" node="element"/>
+    </field>
+    <field cst:name="param5" cst:type="java.lang.String" required="false">
+      <bind-xml name="param5" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.ProductDetails">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.ProductDetails</description>
+    <map-to cst:xml="product-details"/>
+    <field cst:name="quantity" cst:type="int">
+      <bind-xml name="quantity" node="attribute"/>
+    </field>
+    <field cst:name="name" cst:type="java.lang.String">
+      <bind-xml name="name" node="element"/>
+    </field>
+    <field cst:name="price" cst:type="java.lang.String">
+      <bind-xml name="price" node="element"/>
+    </field>
+    <field cst:name="sku" cst:type="java.lang.String">
+      <bind-xml name="sku" node="element"/>
+    </field>
+  </class>
+  
+  <!-- *Res beans: -->
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.TxnRes">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.TxnRes</description>
+    <map-to cst:xml="txn-res"/>
+    <field cst:name="netsTxnMsg" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-msg" node="element"/>
+    </field>
+    <field cst:name="netsTxnRef" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-ref" node="element"/>
+    </field>
+    <field cst:name="netsTxnRespCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-resp-code" node="element"/>
+    </field>
+    <field cst:name="netsMid" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-mid" node="element"/>
+    </field>
+    <field cst:name="paymentMode" cst:type="java.lang.String" required="false">
+      <bind-xml name="payment-mode" node="element"/>
+    </field>
+    <field cst:name="netsTxnDtm" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-dtm" node="element"/>
+    </field>
+    <field cst:name="mid" cst:type="java.lang.Integer" required="false">
+      <bind-xml name="mid" node="element"/>
+    </field>
+    <field cst:name="tid" cst:type="java.lang.String" required="false">
+      <bind-xml name="tid" node="element"/>
+    </field>
+    <field cst:name="creditTxnRes" cst:type="org.brownsocks.payments.gateways.enets.data.CreditTxnRes" required="false">
+      <bind-xml name="credit-txn-res" node="element"/>
+    </field>
+    <field cst:name="netsTxnStatus" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-txn-status" node="element"/>
+    </field>
+    <field cst:name="debitTxnRes" cst:type="org.brownsocks.payments.gateways.enets.data.DebitTxnRes" required="false">
+      <bind-xml name="debit-txn-res" node="element"/>
+    </field>
+    <field cst:name="merchantTxnRef" cst:type="java.lang.String" required="false">
+      <bind-xml name="merchant-txn-ref" node="element"/>
+    </field>
+    <field cst:name="customAttribute"  type= "org.brownsocks.payments.gateways.enets.data.CustomAttribute" collection="arraylist"  required="false">
+      <bind-xml>
+        <class name="org.brownsocks.payments.gateways.enets.data.CustomAttribute">
+          <field  name="key" cst:type="java.lang.String"  required="true">
+            <bind-xml name="key" node="attribute"/>
+          </field>
+          <field name="value" cst:type="java.lang.String" required="true">
+            <bind-xml name="value" node="element"/>
+          </field>
+        </class>
+      </bind-xml>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.CreditTxnRes">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.CreditTxnRes</description>
+    <map-to cst:xml="credit-txn-res"/>
+    <field cst:name="netsRiskScore" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-risk-score" node="element"/>
+    </field>
+    <field cst:name="bankAuthId" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-auth-id" node="element"/>
+    </field>
+    <field cst:name="netsAmountDeducted" cst:type="java.lang.String" required="false">
+      <bind-xml name="nets-amount-deducted" node="element"/>
+    </field>
+    <field cst:name="s3dTxnRes" cst:type="org.brownsocks.payments.gateways.enets.data.S3DTxnRes" required="false">
+      <bind-xml name="s3d-txn-res" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.S3DTxnRes">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.S3DTxnRes</description>
+    <map-to cst:xml="s3d-txn-res"/>
+    <field cst:name="PAreq" cst:type="java.lang.String" required="false">
+      <bind-xml name="PAreq" node="element"/>
+    </field>
+    <field cst:name="md" cst:type="java.lang.String" required="false">
+      <bind-xml name="MD" node="element"/>
+    </field>
+    <field cst:name="termUrl" cst:type="java.lang.String" required="false">
+      <bind-xml name="term-url" node="element"/>
+    </field>
+    <field cst:name="acsUrl" cst:type="java.lang.String" required="false">
+      <bind-xml name="acs-url" node="element"/>
+    </field>
+    <field cst:name="errorCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="error-code" node="element"/>
+    </field>
+  </class>
+  <class cst:name="org.brownsocks.payments.gateways.enets.data.DebitTxnRes">
+    <description>Default mapping for class org.brownsocks.payments.gateways.enets.data.DebitTxnRes</description>
+    <map-to cst:xml="debit-txn-res"/>
+    <field cst:name="bankId" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-id" node="element"/>
+    </field>
+    <field cst:name="gwValueDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-value-date" node="element"/>
+    </field>
+    <field cst:name="param5" cst:type="java.lang.String" required="false">
+      <bind-xml name="param5" node="element"/>
+    </field>
+    <field cst:name="bankTxnTime" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-txn-time" node="element"/>
+    </field>
+    <field cst:name="gwTxnTime" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-txn-time" node="element"/>
+    </field>
+    <field cst:name="version" cst:type="java.lang.String" required="false">
+      <bind-xml name="version" node="element"/>
+    </field>
+    <field cst:name="bankRefCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-ref-code" node="element"/>
+    </field>
+    <field cst:name="param4" cst:type="java.lang.String" required="false">
+      <bind-xml name="param4" node="element"/>
+    </field>
+    <field cst:name="param3" cst:type="java.lang.String" required="false">
+      <bind-xml name="param3" node="element"/>
+    </field>
+    <field cst:name="param15" cst:type="java.lang.String" required="false">
+      <bind-xml name="param15" node="element"/>
+    </field>
+    <field cst:name="param2" cst:type="java.lang.String" required="false">
+      <bind-xml name="param2" node="element"/>
+    </field>
+    <field cst:name="param14" cst:type="java.lang.String" required="false">
+      <bind-xml name="param14" node="element"/>
+    </field>
+    <field cst:name="param13" cst:type="java.lang.String" required="false">
+      <bind-xml name="param13" node="element"/>
+    </field>
+    <field cst:name="param1" cst:type="java.lang.String" required="false">
+      <bind-xml name="param1" node="element"/>
+    </field>
+    <field cst:name="param12" cst:type="java.lang.String" required="false">
+      <bind-xml name="param12" node="element"/>
+    </field>
+    <field cst:name="param11" cst:type="java.lang.String" required="false">
+      <bind-xml name="param11" node="element"/>
+    </field>
+    <field cst:name="bankStatus" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-status" node="element"/>
+    </field>
+    <field cst:name="txnDestCurrencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-dest-currency-code" node="element"/>
+    </field>
+    <field cst:name="bankTimeZone" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-time-zone" node="element"/>
+    </field>
+    <field cst:name="txnSrcCurrencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-src-currency-code" node="element"/>
+    </field>
+    <field cst:name="srcFuncExchangeRate" cst:type="java.lang.String" required="false">
+      <bind-xml name="src-func-exchange-rate" node="element"/>
+    </field>
+    <field cst:name="txnFuncAmt" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-func-amt" node="element"/>
+    </field>
+    <field cst:name="bankRemarks" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-remarks" node="element"/>
+    </field>
+    <field cst:name="retry" cst:type="java.lang.String" required="false">
+      <bind-xml name="retry" node="element"/>
+    </field>
+    <field cst:name="bankTxnDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="bank-txn-date" node="element"/>
+    </field>
+    <field cst:name="gwTxnDate" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-txn-date" node="element"/>
+    </field>
+    <field cst:name="txnFunCurrencyCode" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-fun-currency-code" node="element"/>
+    </field>
+    <field cst:name="gwTimeZone" cst:type="java.lang.String" required="false">
+      <bind-xml name="gw-time-zone" node="element"/>
+    </field>
+    <field cst:name="txnSrcAmt" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-src-amt" node="element"/>
+    </field>
+    <field cst:name="txnDestAmt" cst:type="java.lang.String" required="false">
+      <bind-xml name="txn-dest-amt" node="element"/>
+    </field>
+    <field cst:name="funcDestExchangeRate" cst:type="java.lang.String" required="false">
+      <bind-xml name="func-dest-exchange-rate" node="element"/>
+    </field>
+  </class>
+  
+</mapping>

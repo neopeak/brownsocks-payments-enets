@@ -1,0 +1,42 @@
+Brownsocks Payments eNets module
+================================
+This project contains a module for integrating with eNets UMAPI protocol.
+
+Documentation from eNets is availabe here:
+http://www.enets.com/download.php
+
+
+Author, copyright and license
+----------------------
+Cedric Veilleux, Neopeak Internet Solutions inc.
+cveilleux@neopeak.com
+
+
+Implementation details
+----------------------
+This library is a clean-room implementation of the UMAPI protocol provided by eNets.
+
+Due to the limitations in the official eNets Java client, the implementation has been
+re-done from scratch in this project. This means that none of the official eNets provided
+code is required, except for the initial key generation (see below).
+
+
+Usage example
+----------------------
+See src/test/Test.java for a simple example.
+
+
+Generating PGP keys
+----------------------
+Included with this library are the public and private keys for the test server as well as the eNets live
+server public key.
+
+All you need is to generate your own public/private key pair for the production environment.
+
+You will need to use the key generation tool provided in the java download by eNets. We have not 
+re-implemented this tool.
+
+Your public key must then be uploaded through enets administration web console. 
+
+
+

@@ -1,0 +1,85 @@
+<project name="brownsocks-payments-enets" default="jar" basedir=".">
+
+    <property file="build.properties"/>
+
+    <property name="dir.lib" value="./lib"/>
+    <property name="dir.lib.build" value="${dir.lib}/build"/>
+
+    <property name="dir.targets" value="./targets"/>
+    <property name="dir.targets.jar" value="${dir.targets}/jar"/>
+    <property name="dir.targets.classes" value="${dir.targets}/classes"/>
+    <property name="dir.targets.tests" value="${dir.targets}/tests"/>
+  
+    <property name="dir.src" value="./src"/>
+    <property name="dir.src.java" value="${dir.src}/java"/>
+    <property name="dir.src.resources" value="${dir.src}/resources"/>
+    <property name="dir.src.test" value="${dir.src}/test"/>
+	
+    <property name="targets.jar.name" value="${project.title}-${project.version}.jar"/>
+
+    <path id="compile.classpath">
+        <fileset dir="${dir.lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="tests.classpath">
+        <fileset dir="${dir.lib}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${dir.lib.build}">
+            <include name="*.jar"/>
+        </fileset>
+        <dirset dir="${dir.targets}">
+        	<include name="tests/"/>
+        </dirset>
+        <filelist>
+            <file name="${dir.targets.jar}/${targets.jar.name}"/>
+        </filelist>
+    </path>
+
+    <!-- CLEAN -->
+    <target name="clean" description="Clean up">
+        <delete dir="${dir.targets}"/>
+    </target>
+
+    <!--  RESOURCES -->
+    <target name="resources" description="Copy any resource or configuration files">
+        <mkdir dir="${dir.src.resources}" />
+        <copy todir="${dir.targets.classes}" includeEmptyDirs="no" failonerror="true" >
+            <fileset dir="${dir.src.resources}"/>
+        </copy>
+    </target>
+
+    <!-- COMPILE MAIN SOURCES -->
+    <target name="compile-main" description="Compile source files" depends="clean,resources">
+        <mkdir dir="${dir.targets.classes}"/>
+        <javac srcdir="${dir.src.java}" destdir="${dir.targets.classes}" includeantruntime="false" debug="on" source="1.6" target="1.6">
+            <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+
+    <!-- COMPILE TESTS -->
+    <target name="compile-tests" description="Compile tests" depends="jar">
+        <mkdir dir="${dir.targets.tests}"/>
+        <javac srcdir="${dir.src.test}" destdir="${dir.targets.tests}" includeantruntime="false" debug="on" source="1.6" target="1.6">
+            <classpath refid="tests.classpath"/>
+        </javac>
+    </target>
+
+    <!-- CREATE JAR FILE -->
+    <target name="jar" description="Create jar file" depends="compile-main">
+        <jar basedir="${dir.targets.classes}" jarfile="${dir.targets.jar}/${targets.jar.name}" />
+    </target>
+    
+    <!-- RUN JUNIT TESTS -->
+    <target name="tests" description="Run tests" depends="compile-tests">
+      <java classname="junit.swingui.TestRunner" fork="yes" maxmemory="512m" output="tests.out">
+         <classpath>
+            <path refid="tests.classpath" />
+         </classpath>
+         <arg value="org.brownsocks.payments.AllTests" />
+      </java>
+    </target>
+
+</project>

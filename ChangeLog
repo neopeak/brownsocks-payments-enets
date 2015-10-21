@@ -1,0 +1,8 @@
+Release 0.1.1                   2011-12-21
+- EnetsPostServlet: Disable TRACE method for PCI compliance.
+- EnetsPostServlet: Send own error message on GET requests to 
+  prevent servlet container version from being exposed.
+
+Release 0.1.0                   2011-12-08
+- Initial release.
+
